@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Breach Investigation | Reese LLP</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .db-hero {
+      background: var(--navy);
+      color: #fff;
+      padding: 5rem 1.5rem 3rem;
+      text-align: center;
+    }
+    .db-hero h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); margin-bottom: 1rem; line-height: 1.25; }
+    .db-hero h1 span { color: var(--gold); }
+    .db-hero p { max-width: 600px; margin: 0 auto; opacity: 0.85; }
+
+    .db-form-section {
+      background: var(--gray-50);
+      padding: 4rem 1.5rem;
+    }
+    .db-form-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .db-step { display: none; }
+    .db-step.active { display: block; }
+
+    .db-step-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .db-step h2 {
+      font-size: 1.25rem;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+
+    .radio-group, .check-group { display: flex; flex-direction: column; gap: 0.75rem; }
+    .radio-option, .check-option {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.875rem 1rem;
+      border: 2px solid var(--gray-200);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+      font-weight: 500;
+      color: var(--navy);
+    }
+    .radio-option:hover, .check-option:hover { border-color: var(--gold); background: #fffbf0; }
+    .radio-option input, .check-option input { accent-color: var(--gold); width: 18px; height: 18px; flex-shrink: 0; }
+    .radio-option.selected, .check-option.selected { border-color: var(--gold); background: #fffbf0; }
+
+    .db-disclaimer {
+      font-size: 0.78rem;
+      color: var(--gray-500);
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .db-info-section {
+      padding: 4rem 1.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .db-info-section h2 { color: var(--navy); margin-bottom: 1rem; }
+    .db-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .db-info-card {
+      background: var(--gray-50);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+    .db-info-card h3 { color: var(--navy); font-size: 1rem; margin-bottom: 0.5rem; }
+    .db-info-card p { font-size: 0.9rem; color: var(--gray-600); }
+  </style>
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header>
+  <div class="header-top">
+    <a href="../" class="logo">REESE LLP</a>
+    <nav id="main-nav">
+      <a href="../#about">About Us</a>
+      <a href="../#featured-cases">Featured Cases</a>
+      <a href="../#investigations">Investigations</a>
+      <a href="../#news">News</a>
+      <a href="../#report-case">Contact</a>
+      <a href="../#report-case" class="cta">Report A Case</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="header-locations">
+    New York <span>|</span> California <span>|</span> Florida <span>|</span> Minnesota
+  </div>
+</header>
+
+<!-- ─── HERO ─── -->
+<div class="db-hero">
+  <h1>Received a Data Breach Notice?<br><span>You May Have Legal Rights.</span></h1>
+  <p>Reese LLP is investigating companies that failed to protect consumer data. Find out if you qualify for a free case review — no upfront cost, no obligation.</p>
+</div>
+
+<!-- ─── FORM ─── -->
+<section class="db-form-section">
+  <div class="db-form-wrap">
+
+    <!-- Step 1 -->
+    <div class="db-step active" id="step-1">
+      <div class="db-step-label">Step 1 of 3</div>
+      <h2>Did you receive a data breach notice?</h2>
+      <div class="radio-group">
+        <label class="radio-option">
+          <input type="radio" name="breach-notice" value="yes" /> Yes
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="breach-notice" value="no" /> No
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="breach-notice" value="not-sure" /> Not Sure
+        </label>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="db-step" id="step-2">
+      <div class="db-step-label">Step 2 of 3</div>
+      <h2>What type of information may have been exposed?</h2>
+      <div class="check-group">
+        <label class="check-option">
+          <input type="checkbox" value="financial" /> Financial information
+        </label>
+        <label class="check-option">
+          <input type="checkbox" value="medical" /> Medical information
+        </label>
+        <label class="check-option">
+          <input type="checkbox" value="login" /> Login / account information
+        </label>
+        <label class="check-option">
+          <input type="checkbox" value="ssn" /> Social Security number
+        </label>
+        <label class="check-option">
+          <input type="checkbox" value="not-sure" /> Not sure
+        </label>
+      </div>
+      <button class="btn-submit" id="step-2-continue" style="margin-top:1.5rem;width:100%;">Continue</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="db-step" id="step-3">
+      <div class="db-step-label">Step 3 of 3</div>
+      <h2>Tell us how to reach you</h2>
+      <form id="db-form" novalidate>
+        <div class="form-group">
+          <label>Full Name <span class="req">*</span></label>
+          <input type="text" placeholder="Jane Smith" required />
+        </div>
+        <div class="form-group">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" placeholder="jane@example.com" required />
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="(555) 000-0000" />
+        </div>
+        <button type="submit" class="btn-submit" style="width:100%;margin-top:0.5rem;">Submit for Free Case Review</button>
+      </form>
+    </div>
+
+    <p class="db-disclaimer">Submitting this form does not create an attorney-client relationship. All information is reviewed confidentially.</p>
+  </div>
+</section>
+
+<!-- ─── INFO ─── -->
+<section class="db-info-section">
+  <h2>What Is a Data Breach?</h2>
+  <p>A data breach occurs when a company fails to adequately protect sensitive consumer information — including names, emails, financial records, medical data, and login credentials — allowing unauthorized parties to access or steal it.</p>
+  <div class="db-info-grid">
+    <div class="db-info-card">
+      <h3>Identity Theft Risk</h3>
+      <p>Exposed personal data can be used to open fraudulent accounts, file false tax returns, or access your financial accounts.</p>
+    </div>
+    <div class="db-info-card">
+      <h3>Time and Stress</h3>
+      <p>Victims spend hundreds of hours resolving fraud, disputing charges, and monitoring their credit in the aftermath.</p>
+    </div>
+    <div class="db-info-card">
+      <h3>Loss of Privacy</h3>
+      <p>Once your data is exposed, it can circulate on the dark web indefinitely, creating ongoing risk for years.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="../" class="logo">REESE LLP</a>
+      <p>Reese LLP litigates on behalf of everyday consumers and individuals, large and small investors, and small business owners. A force for change when it comes to public health and corporate reform, as well as protecting the environment and your civil liberties.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Office Locations</h4>
+      <address>
+        <strong style="color:rgba(255,255,255,0.75);">New York</strong><br>
+        100 West 93rd Street<br>
+        Sixteenth Floor<br>
+        New York, New York 10025<br><br>
+        <span class="contact-detail">Tel: <a href="tel:2126430500">(212) 643-0500</a></span><br>
+        <span class="contact-detail"><a href="mailto:mreese@reesellp.com">mreese@reesellp.com</a></span>
+      </address>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="../#about">About Us</a>
+      <a href="../#featured-cases">Featured Cases</a>
+      <a href="../#news">News</a>
+      <a href="../#report-case">Report A Case</a>
+      <a href="../#report-case">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>
+      <p>&copy; 2026 Reese, LLP. All rights reserved.</p>
+      <p style="margin-top:0.25rem;">Attorney advertising. Prior results do not guarantee a similar outcome.</p>
+    </div>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="../script.js"></script>
+<script>
+  // Step navigation
+  function showStep(id) {
+    document.querySelectorAll('.db-step').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+
+  // Step 1 → Step 2 on radio selection
+  document.querySelectorAll('input[name="breach-notice"]').forEach(radio => {
+    radio.addEventListener('change', () => showStep('step-2'));
+  });
+
+  // Highlight selected radio options
+  document.querySelectorAll('.radio-option input').forEach(input => {
+    input.addEventListener('change', () => {
+      document.querySelectorAll('.radio-option').forEach(opt => opt.classList.remove('selected'));
+      input.closest('.radio-option').classList.add('selected');
+    });
+  });
+
+  // Toggle checkbox highlight
+  document.querySelectorAll('.check-option input').forEach(input => {
+    input.addEventListener('change', () => {
+      input.closest('.check-option').classList.toggle('selected', input.checked);
+    });
+  });
+
+  // Step 2 → Step 3
+  document.getElementById('step-2-continue').addEventListener('click', () => showStep('step-3'));
+
+  // Step 3 submit
+  document.getElementById('db-form').addEventListener('submit', e => {
+    e.preventDefault();
+    showToast('Thank you. Our intake team will review your information and reach out shortly.');
+    e.target.reset();
+    showStep('step-1');
+    document.querySelectorAll('.radio-option, .check-option').forEach(el => el.classList.remove('selected'));
+  });
+</script>
+</body>
+</html>
