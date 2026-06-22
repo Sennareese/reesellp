@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reese LLP | Consumer Protection &amp; Class Action Attorneys</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header>
+  <div class="header-top">
+    <a href="#hero" class="logo">REESE LLP</a>
+    <nav id="main-nav">
+      <a href="#about">About Us</a>
+      <a href="#featured-cases">Featured Cases</a>
+      <a href="#investigations">Investigations</a>
+      <a href="#news">News</a>
+      <a href="#report-case">Contact</a>
+      <a href="#report-case" class="cta">Report A Case</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="header-locations">
+    New York <span>|</span> California <span>|</span> Florida <span>|</span> Minnesota
+  </div>
+</header>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-skyline"></div>
+  <div class="hero-content">
+    <h1>The Reese LLP <span>Difference</span></h1>
+    <p>Reese LLP represents everyday consumers, individuals, investors, and small business owners. Attorneys specialize in federal and state court litigation covering consumer protection, securities fraud, antitrust, and civil rights matters.</p>
+    <div class="hero-buttons">
+      <a href="#featured-cases" class="btn-primary">View Our Featured Cases</a>
+      <a href="#report-case" class="btn-outline">Report A Case</a>
+    </div>
+    <div class="hero-links">
+      <a href="#investigations">Data Breach Investigation</a>
+      <span>&middot;</span>
+      <a href="#investigations">ESA Letter Investigation</a>
+      <span>&middot;</span>
+      <a href="#investigations">Kroger Mac &amp; Cheese Investigation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── INVESTIGATIONS ─── -->
+<section id="investigations">
+  <div class="section-inner">
+    <div class="section-label">Active Matters</div>
+    <h2 class="section-title">Current Investigations</h2>
+    <p class="section-subtitle">Reese LLP is actively investigating the following matters on behalf of consumers and individuals. If you have been affected, please report your case.</p>
+    <div class="investigations-grid">
+      <div class="inv-card">
+        <div class="inv-category">Technology</div>
+        <div class="inv-icon">&#128274;</div>
+        <h3>Data Privacy Violations</h3>
+        <p>Investigating companies failing to protect consumer data or engaging in unauthorized collection and sharing of personal information.</p>
+      </div>
+      <div class="inv-card">
+        <div class="inv-category">Consumer Fraud</div>
+        <div class="inv-icon">&#127807;</div>
+        <h3>Deceptive Food Labeling</h3>
+        <p>Investigating manufacturers making misleading claims about "natural," "organic," or nutritional content on food product labels.</p>
+      </div>
+      <div class="inv-card">
+        <div class="inv-category">Greenwashing</div>
+        <div class="inv-icon">&#127758;</div>
+        <h3>Greenwashing Claims</h3>
+        <p>Investigating false or misleading environmental and sustainability claims about "eco-friendly" or "sustainable" products.</p>
+      </div>
+      <div class="inv-card">
+        <div class="inv-category">Banking Fraud</div>
+        <div class="inv-icon">&#127981;</div>
+        <h3>Illegal Banking Fees</h3>
+        <p>Investigating financial institutions charging hidden, unauthorized, or excessive account fees to their customers.</p>
+      </div>
+      <div class="inv-card">
+        <div class="inv-category">Consumer Fraud</div>
+        <div class="inv-icon">&#128138;</div>
+        <h3>Pharmaceutical Fraud</h3>
+        <p>Investigating misleading marketing, hidden side effects, or price manipulation of medications by pharmaceutical companies.</p>
+      </div>
+      <div class="inv-card">
+        <div class="inv-category">False Advertising</div>
+        <div class="inv-icon">&#128663;</div>
+        <h3>Auto Industry Defects</h3>
+        <p>Investigating concealed defects, emissions fraud, and deceptive feature marketing by automobile manufacturers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── INTAKE FORM ─── -->
+<section id="intake">
+  <div class="section-inner">
+    <div class="intake-inner">
+      <div class="intake-text">
+        <div class="section-label">Get Help</div>
+        <h2 class="section-title" style="color:#fff;">Potential Client Inquiry</h2>
+        <p>If you believe you have been affected by any of the above investigations or a similar matter, please fill out the form to be considered as a potential client.</p>
+        <p>Our attorneys will review your submission confidentially and reach out if your matter is one the firm can assist with.</p>
+        <div class="disclaimer">
+          Submitting this form does not create an attorney-client relationship. All information is reviewed confidentially by our attorneys.<br><br>
+          Submissions are emailed directly to our intake team at <strong>mreese@reesellp.com</strong>.
+        </div>
+      </div>
+      <div class="intake-form">
+        <h3>Submit Your Information</h3>
+        <form id="intake-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name <span class="req">*</span></label>
+              <input type="text" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label>Email <span class="req">*</span></label>
+              <input type="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="(555) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label>Related Investigation <span class="req">*</span></label>
+            <select required>
+              <option value="" disabled selected>Select an investigation</option>
+              <option>Data Privacy Violations</option>
+              <option>Deceptive Food Labeling</option>
+              <option>Greenwashing Claims</option>
+              <option>Illegal Banking Fees</option>
+              <option>Pharmaceutical Fraud</option>
+              <option>Auto Industry Defects</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>How were you affected? <span class="req">*</span></label>
+            <textarea placeholder="Please describe how you were affected..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Submit Client Intake</button>
+          <p class="form-note">All submissions are reviewed confidentially. Submitting this form does not create an attorney-client relationship.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FEATURED CASES ─── -->
+<section id="featured-cases">
+  <div class="section-inner">
+    <div class="section-label">Our Work</div>
+    <h2 class="section-title">Featured Cases</h2>
+    <p class="section-subtitle">Reese LLP represents clients in a wide array of class actions involving Consumer Fraud, Antitrust and Securities law violations.</p>
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="consumer-fraud">Consumer Fraud</button>
+      <button class="filter-tab" data-filter="consumer-protection">Consumer Protection</button>
+      <button class="filter-tab" data-filter="greenwashing">Greenwashing</button>
+      <button class="filter-tab" data-filter="banking-fraud">Banking Fraud</button>
+      <button class="filter-tab" data-filter="false-advertising">False Advertising</button>
+    </div>
+    <div class="cases-grid">
+      <div class="case-card" data-category="consumer-fraud">
+        <span class="case-badge">Consumer Fraud</span>
+        <h3>Mantikas v. Kellogg Co.</h3>
+        <div class="case-citation">910 F.3d 633 (2d Cir. 2018)</div>
+        <p>Case involving alleged misrepresentation of amount of whole grain in food product; adoption by Second Circuit of reasonable consumer standard.</p>
+        <a href="#" class="case-link">Learn More</a>
+      </div>
+      <div class="case-card" data-category="consumer-protection">
+        <span class="case-badge">Consumer Protection</span>
+        <h3>Sgouros v. Transunion Corp.</h3>
+        <div class="case-citation">817 F.3d 1029 (7th Cir. 2016)</div>
+        <p>Case alleging violation of the Fair Credit Reporting Act ("FCRA"); rejection by Seventh Circuit that case was subject to arbitration.</p>
+        <a href="#" class="case-link">Learn More</a>
+      </div>
+      <div class="case-card" data-category="consumer-fraud">
+        <span class="case-badge">Consumer Fraud</span>
+        <h3>Praxis Project v. The Coca-Cola Co. et al.</h3>
+        <div class="case-citation">Case No. 2017 CA 004801 B (D.C. Superior Court)</div>
+        <p>Case alleging manipulation of science attempting to delink and discredit connection between sugar with diabetes and other diseases and health issues.</p>
+        <a href="#" class="case-link">Learn More</a>
+      </div>
+      <div class="case-card" data-category="greenwashing">
+        <span class="case-badge">Greenwashing</span>
+        <h3>In re Santa Fe Natural Tobacco Co. Marketing &amp; Sales Practices Litig.</h3>
+        <div class="case-citation">288 F.Supp.3d 1087 (D. New Mexico 2017)</div>
+        <p>Case alleging violation of consumer protection statutes for deceptive labeling of "natural" cigarettes.</p>
+        <a href="#" class="case-link">Learn More</a>
+      </div>
+      <div class="case-card" data-category="banking-fraud">
+        <span class="case-badge">Banking Fraud</span>
+        <h3>Huyer v. Wells Fargo Co.</h3>
+        <div class="case-citation">295 F.R.D. 332 (S.D. Iowa 2013)</div>
+        <p>Certification of RICO class on behalf of mortgagors, resulting in $25 million settlement.</p>
+        <a href="#" class="case-link">Learn More</a>
+      </div>
+      <div class="case-card" data-category="false-advertising">
+        <span class="case-badge">False Advertising</span>
+        <h3>Coe et al. v. General Mills, Inc.</h3>
+        <div class="case-citation">Case No. 15-cv-05112-TEH (N.D. Cal. 2016)</div>
+        <p>Case alleging violation for deceptive and misleading packaging regarding levels of protein and sugar in popular breakfast cereal.</p>
+        <a href="#" class="case-link">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ATTORNEYS ─── -->
+<section id="about" style="background:var(--gray-50);">
+  <div class="section-inner">
+    <div class="section-label">The Team</div>
+    <h2 class="section-title">Our Attorneys</h2>
+    <p class="section-subtitle">Experienced litigators committed to achieving exceptional outcomes for consumers, investors, and individuals.</p>
+    <div class="attorneys-grid">
+      <div class="attorney-card">
+        <div class="attorney-avatar">MRR</div>
+        <h3>Michael R. Reese</h3>
+        <div class="attorney-role">Founding Partner</div>
+        <div class="attorney-location">&#128205; New York</div>
+        <p class="attorney-bio">Mr. Reese litigates consumer and antitrust cases as class actions and on behalf of individual clients. Prior to entering private practice in 2000, Mr. Reese served as an assistant district attorney at the Manhattan District Attorney's Office where he served as a trial attorney prosecuting both violent and white-collar crime.</p>
+        <a href="#" class="btn-profile">View Profile</a>
+      </div>
+      <div class="attorney-card">
+        <div class="attorney-avatar">SJN</div>
+        <h3>Sue J. Nam</h3>
+        <div class="attorney-role">Partner</div>
+        <div class="attorney-location">&#128205; New York</div>
+        <p class="attorney-bio">Ms. Nam is based in New York, and she focuses on intellectual property and consumer class actions. Prior to joining the firm, Ms. Nam was the General Counsel for NexCen Brands, Inc., a publicly traded company that owned a portfolio of consumer brands in food, fashion and homeware.</p>
+        <a href="#" class="btn-profile">View Profile</a>
+      </div>
+      <div class="attorney-card">
+        <div class="attorney-avatar">CFR</div>
+        <h3>Carlos F. Ramirez</h3>
+        <div class="attorney-role">Partner</div>
+        <div class="attorney-location">&#128205; New York</div>
+        <p class="attorney-bio">Mr. Ramirez is based in New York, and he focuses his practice on the litigation of consumer class actions. Prior to entering private practice in 2001, Mr. Ramirez served as an Assistant District Attorney at the Manhattan District Attorney's Office where he served as a trial attorney prosecuting both violent and white-collar crimes.</p>
+        <a href="#" class="btn-profile">View Profile</a>
+      </div>
+      <div class="attorney-card">
+        <div class="attorney-avatar">GVGI</div>
+        <h3>George V. Granade II</h3>
+        <div class="attorney-role">Partner</div>
+        <div class="attorney-location">&#128205; Los Angeles</div>
+        <p class="attorney-bio">Mr. Granade is a partner at Reese LLP based in Los Angeles, focusing on consumer class actions. Cases litigated include Martin v. Cargill, Inc. (settled for $6.1 million) and Barron v. Snyder's-Lance, Inc. involving products labeled as "natural."</p>
+        <a href="#" class="btn-profile">View Profile</a>
+      </div>
+      <div class="attorney-card">
+        <div class="attorney-avatar">CDM</div>
+        <h3>Charles D. Moore</h3>
+        <div class="attorney-role">Associate</div>
+        <div class="attorney-location">&#128205; Minneapolis</div>
+        <p class="attorney-bio">Mr. Moore is based in Minneapolis, Minnesota where he focuses on both consumer as well as employment class actions.</p>
+        <a href="#" class="btn-profile">View Profile</a>
+      </div>
+      <div class="attorney-card">
+        <div class="attorney-avatar">KJS</div>
+        <h3>Kate J. Stoia</h3>
+        <div class="attorney-role">Of Counsel</div>
+        <div class="attorney-location">&#128205; San Francisco</div>
+        <p class="attorney-bio">Ms. Stoia is based in San Francisco. Prior to joining the firm, Ms. Stoia was an associate specializing in general and corporate litigation and labor and employment law at Brobeck Phleger & Harrison LLP, Gibson Dunn & Crutcher LLP, and Clarence & Snell LLP.</p>
+        <a href="#" class="btn-profile">View Profile</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── NEWS ─── -->
+<section id="news">
+  <div class="section-inner">
+    <div class="section-label">Press &amp; Media</div>
+    <h2 class="section-title">Latest News</h2>
+    <p class="section-subtitle">Recent coverage and updates from Reese LLP.</p>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-card-img">&#128240;</div>
+        <div class="news-card-body">
+          <div class="news-source">Daily Journal</div>
+          <h3>Michael Reese Quoted Regarding "Greenwashing" Class Actions</h3>
+          <p>Michael Reese quoted in Daily Journal regarding "Greenwashing" class actions and the growing trend of holding corporations accountable for misleading environmental claims.</p>
+          <a href="#" class="news-link">Read More</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-card-img">&#9878;&#65039;</div>
+        <div class="news-card-body">
+          <div class="news-source">Industry News</div>
+          <h3>Reese LLP Appointed Lead Counsel in Antitrust Action Against Tomato Processors</h3>
+          <p>Reese LLP appointed lead counsel in antitrust action against tomato processors, representing consumers affected by alleged price-fixing in the industry.</p>
+          <a href="#" class="news-link">Read More</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-card-img">&#9878;&#65039;</div>
+        <div class="news-card-body">
+          <div class="news-source">Legal News</div>
+          <h3>Reese LLP Achieves Victory in Defeating Motion to Dismiss RICO Claims</h3>
+          <p>Reese LLP achieves victory in defeating motion to dismiss RICO claims in mortgage fraud action against Wells Fargo, securing a $25 million settlement for borrowers.</p>
+          <a href="#" class="news-link">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── REPORT A CASE ─── -->
+<section id="report-case">
+  <div class="section-inner">
+    <div class="report-inner">
+      <div class="report-text">
+        <div class="section-label">Contact Us</div>
+        <h2>Report A Case</h2>
+        <p>Whether it is consumer fraud, corporate wrongdoing or violation of your rights, the attorneys of Reese LLP are ready, willing and able to thoroughly investigate and prosecute all meritorious claims on your behalf.</p>
+        <p>Reese LLP specializes in representing consumers, investors, and small businesses in a wide-array of class action litigation, as well as individual actions, throughout the nation. We are based in Manhattan, with attorneys also in Texas and California.</p>
+        <p>We go after corporate America for everything from hiding virtual poisons in your food and toxic chemicals in your household products to fraudulent banking fees and broker-dealer kickbacks. In addition to litigating against consumer and investor fraud, we focus on antitrust and civil rights litigation.</p>
+        <div class="disclaimer">
+          Please note contacting Reese LLP or one of our attorneys does not create an attorney-client relationship. The submission of information utilizing this website does not form an attorney-client relationship nor does it mean that we represent you.
+        </div>
+      </div>
+      <div class="report-form">
+        <h3>Case Report Form</h3>
+        <form id="report-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name <span class="req">*</span></label>
+              <input type="text" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label>Email <span class="req">*</span></label>
+              <input type="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="(555) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label>Case Type <span class="req">*</span></label>
+            <select required>
+              <option value="" disabled selected>Select a case type</option>
+              <option>Consumer Fraud</option>
+              <option>False and Deceptive Advertising</option>
+              <option>Greenwashing</option>
+              <option>Technology Cases</option>
+              <option>Banking Fraud</option>
+              <option>AntiTrust</option>
+              <option>Whistleblower Actions</option>
+              <option>Securities Fraud</option>
+              <option>Individual Actions</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Case Description <span class="req">*</span></label>
+            <textarea placeholder="Please describe your case in detail..." style="min-height:130px;" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Submit Case Report</button>
+          <p class="form-note">All submissions are reviewed confidentially. Submitting this form does not create an attorney-client relationship.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="#hero" class="logo">REESE LLP</a>
+      <p>Reese LLP litigates on behalf of everyday consumers and individuals, large and small investors, and small business owners. A force for change when it comes to public health and corporate reform, as well as protecting the environment and your civil liberties.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Office Locations</h4>
+      <address>
+        <strong style="color:rgba(255,255,255,0.75);">New York</strong><br>
+        100 West 93rd Street<br>
+        Sixteenth Floor<br>
+        New York, New York 10025<br><br>
+        <span class="contact-detail">Tel: <a href="tel:2126430500">(212) 643-0500</a></span><br>
+        <span class="contact-detail"><a href="mailto:mreese@reesellp.com">mreese@reesellp.com</a></span>
+      </address>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About Us</a>
+      <a href="#featured-cases">Featured Cases</a>
+      <a href="#news">News</a>
+      <a href="#report-case">Report A Case</a>
+      <a href="#report-case">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>
+      <p>&copy; 2026 Reese, LLP. All rights reserved.</p>
+      <p style="margin-top:0.25rem;">Attorney advertising. Prior results do not guarantee a similar outcome.</p>
+    </div>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
