@@ -34,13 +34,15 @@ function showToast(message) {
 }
 
 // Form submission handlers
-document.getElementById('intake-form').addEventListener('submit', e => {
+const intakeForm = document.getElementById('intake-form');
+if (intakeForm) intakeForm.addEventListener('submit', e => {
   e.preventDefault();
   showToast('Thank you for your submission. Our intake team will review your information shortly.');
   e.target.reset();
 });
 
-document.getElementById('report-form').addEventListener('submit', e => {
+const reportForm = document.getElementById('report-form');
+if (reportForm) reportForm.addEventListener('submit', e => {
   e.preventDefault();
   showToast('Your case report has been submitted. All submissions are reviewed confidentially.');
   e.target.reset();

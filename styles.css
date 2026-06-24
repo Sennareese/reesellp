@@ -898,3 +898,171 @@ footer {
   .footer-main { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 }
+
+/* ─── ATTORNEY PROFILE PAGE ─── */
+.profile-hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.profile-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-avatar-lg {
+  width: 120px;
+  height: 120px;
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+  border: 3px solid rgba(201,168,76,0.4);
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
+.profile-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.profile-hero-role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.profile-hero-location {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.profile-body {
+  background: var(--white);
+  padding: 4rem 1.5rem;
+}
+
+.profile-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--navy);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 1px;
+  margin-bottom: 3rem;
+  transition: color 0.2s;
+}
+
+.profile-back:hover { color: var(--gold); }
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.profile-meta-box {
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-meta-box h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  color: var(--navy);
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+}
+
+.profile-meta-box p { margin-bottom: 0.35rem; }
+
+.profile-meta-box a {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.profile-meta-box a:hover { color: var(--gold); }
+
+.profile-meta-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-meta-box ul li {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--gray-100);
+  line-height: 1.4;
+}
+
+.profile-meta-box ul li:last-child { border-bottom: none; }
+
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.profile-tag {
+  display: inline-block;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background: rgba(201,168,76,0.1);
+  color: #8b6914;
+  border: 1px solid rgba(201,168,76,0.3);
+}
+
+.profile-bio p {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.profile-matters-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.profile-matters { display: grid; gap: 1.25rem; }
+
+@media (max-width: 768px) {
+  .profile-content { grid-template-columns: 1fr; }
+  .profile-sidebar { order: 2; }
+  .profile-main { order: 1; }
+}

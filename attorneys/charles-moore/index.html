@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attorney Profile | Reese LLP</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <a href="../../" class="logo">REESE LLP</a>
+    <nav id="main-nav">
+      <a href="../../#about">About Us</a>
+      <a href="../../#featured-cases">Featured Cases</a>
+      <a href="../../#investigations">Investigations</a>
+      <a href="../../#news">News</a>
+      <a href="../../#report-case">Contact</a>
+      <a href="../../#report-case" class="cta">Report A Case</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="header-locations">
+    New York <span>|</span> California <span>|</span> Florida <span>|</span> Minnesota
+  </div>
+</header>
+
+<section class="profile-hero">
+  <div class="profile-hero-inner" id="profile-hero-content"></div>
+</section>
+
+<div class="profile-body">
+  <div class="section-inner">
+    <a href="../../#about" class="profile-back">&larr; Back to Our Attorneys</a>
+    <div class="profile-content">
+      <aside class="profile-sidebar" id="profile-sidebar"></aside>
+      <div class="profile-main" id="profile-main"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="../../" class="logo">REESE LLP</a>
+      <p>Reese LLP litigates on behalf of everyday consumers and individuals, large and small investors, and small business owners. A force for change when it comes to public health and corporate reform, as well as protecting the environment and your civil liberties.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Office Locations</h4>
+      <address>
+        <strong style="color:rgba(255,255,255,0.75);">New York</strong><br>
+        100 West 93rd Street<br>
+        Sixteenth Floor<br>
+        New York, New York 10025<br><br>
+        <span class="contact-detail">Tel: <a href="tel:2126430500">(212) 643-0500</a></span><br>
+        <span class="contact-detail"><a href="mailto:mreese@reesellp.com">mreese@reesellp.com</a></span>
+      </address>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="../../#about">About Us</a>
+      <a href="../../#featured-cases">Featured Cases</a>
+      <a href="../../#news">News</a>
+      <a href="../../#report-case">Report A Case</a>
+      <a href="../../#report-case">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>
+      <p>&copy; 2026 Reese, LLP. All rights reserved.</p>
+      <p style="margin-top:0.25rem;">Attorney advertising. Prior results do not guarantee a similar outcome.</p>
+    </div>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script type="module">
+  import { attorneys } from '../data.js';
+
+  const SLUG = 'charles-moore';
+
+  const attorney = attorneys.find(function(a) { return a.slug === SLUG; });
+
+  if (attorney) {
+    document.title = attorney.name + ' | Reese LLP';
+
+    document.getElementById('profile-hero-content').innerHTML =
+      (attorney.image
+        ? '<img class="profile-photo" src="' + attorney.image + '" alt="' + attorney.name + '">'
+        : '<div class="attorney-avatar profile-avatar-lg">' + attorney.initials + '</div>')
+      + '<h1>' + attorney.name + '</h1>'
+      + '<p class="profile-hero-role">' + attorney.role + '</p>'
+      + '<p class="profile-hero-location">' + attorney.location + '</p>';
+
+    var sidebarHTML = '';
+    if (attorney.phone || attorney.email) {
+      sidebarHTML += '<div class="profile-meta-box"><h4>Contact</h4>';
+      if (attorney.phone) sidebarHTML += '<p><a href="tel:' + attorney.phone.replace(/\D/g, '') + '">' + attorney.phone + '</a></p>';
+      if (attorney.email) sidebarHTML += '<p><a href="mailto:' + attorney.email + '">' + attorney.email + '</a></p>';
+      sidebarHTML += '</div>';
+    }
+    if (attorney.focus && attorney.focus.length) {
+      sidebarHTML += '<div class="profile-meta-box"><h4>Practice Areas</h4><div class="profile-tags">'
+        + attorney.focus.map(function(f) { return '<span class="profile-tag">' + f + '</span>'; }).join('')
+        + '</div></div>';
+    }
+    if (attorney.admissions && attorney.admissions.length) {
+      sidebarHTML += '<div class="profile-meta-box"><h4>Bar Admissions</h4><ul>'
+        + attorney.admissions.map(function(adm) { return '<li>' + adm + '</li>'; }).join('')
+        + '</ul></div>';
+    }
+    if (attorney.education && attorney.education.length) {
+      sidebarHTML += '<div class="profile-meta-box"><h4>Education</h4><ul>'
+        + attorney.education.map(function(ed) { return '<li>' + ed + '</li>'; }).join('')
+        + '</ul></div>';
+    }
+    document.getElementById('profile-sidebar').innerHTML = sidebarHTML;
+
+    var mainHTML = '<div class="profile-bio">'
+      + attorney.bioFull.map(function(p) { return '<p>' + p + '</p>'; }).join('')
+      + '</div>';
+    if (attorney.matters && attorney.matters.length) {
+      mainHTML += '<h2 class="profile-matters-title">Representative Matters</h2>'
+        + '<div class="profile-matters">'
+        + attorney.matters.map(function(m) {
+            return '<div class="case-card"><h3>' + m.name + '</h3>'
+              + '<div class="case-citation">' + m.citation + '</div>'
+              + '<p>' + m.description + '</p></div>';
+          }).join('')
+        + '</div>';
+    }
+    document.getElementById('profile-main').innerHTML = mainHTML;
+  }
+</script>
+
+<script src="../../script.js"></script>
+</body>
+</html>
